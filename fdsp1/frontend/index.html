@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stack Expression Evaluator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <header class="header">
+            <div class="brand">
+                <div class="brand-icon">Σ</div>
+                <div>
+                    <h1>Stack<span>Calc</span></h1>
+                    <p>Expression Evaluator</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                C++ ENGINE ACTIVE
+            </div>
+        </header>
+
+        <main class="main-layout">
+
+            <section class="calculator">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Scientific Calculator</h2>
+                        <p>Powered by Stack Data Structure</p>
+                    </div>
+
+                    <span class="tag">DSA PROJECT</span>
+                </div>
+
+                <div class="display">
+
+                    <label>ENTER EXPRESSION</label>
+
+                    <input
+                        type="text"
+                        id="expression"
+                        placeholder="0"
+                        autocomplete="off"
+                        spellcheck="false"
+                    >
+
+                    <div class="result-area">
+                        <span>RESULT</span>
+                        <h2 id="result">0</h2>
+                    </div>
+
+                    <div class="postfix-area">
+                        <span>POSTFIX CONVERSION</span>
+                        <p id="postfix">Your postfix expression will appear here</p>
+                    </div>
+
+                </div>
+
+                <div class="keypad">
+
+                    <button class="special" data-action="clear">AC</button>
+                    <button class="special" data-action="delete">DEL</button>
+                    <button class="operator" data-value="(">(</button>
+                    <button class="operator" data-value=")">)</button>
+
+                    <button data-value="7">7</button>
+                    <button data-value="8">8</button>
+                    <button data-value="9">9</button>
+                    <button class="operator" data-value="/">÷</button>
+
+                    <button data-value="4">4</button>
+                    <button data-value="5">5</button>
+                    <button data-value="6">6</button>
+                    <button class="operator" data-value="*">×</button>
+
+                    <button data-value="1">1</button>
+                    <button data-value="2">2</button>
+                    <button data-value="3">3</button>
+                    <button class="operator" data-value="-">−</button>
+
+                    <button data-value="0">0</button>
+                    <button data-value=".">.</button>
+                    <button class="operator" data-value="+">+</button>
+                    <button class="operator" data-value="/">/</button>
+
+                    <button class="equals" id="calculate">
+                        = EVALUATE EXPRESSION
+                    </button>
+
+                </div>
+
+                <div id="message" class="message">
+                    Enter an expression and press evaluate.
+                </div>
+
+            </section>
+
+            <aside class="history-panel">
+
+                <div class="history-header">
+                    <div>
+                        <h2>History</h2>
+                        <p>Your previous calculations</p>
+                    </div>
+
+                    <button id="clearHistory" class="clear-history">
+                        Clear
+                    </button>
+                </div>
+
+                <div id="historyList" class="history-list">
+
+                    <div class="empty-history">
+                        <div class="empty-icon">↻</div>
+                        <p>No calculations yet</p>
+                        <small>Your results will appear here.</small>
+                    </div>
+
+                </div>
+
+                <div class="info-card">
+                    <h3>How it works</h3>
+
+                    <div class="info-item">
+                        <span>01</span>
+                        <div>
+                            <strong>Infix to Postfix</strong>
+                            <p>Operator stack converts the expression.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span>02</span>
+                        <div>
+                            <strong>Stack Evaluation</strong>
+                            <p>Operand stack calculates the result.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span>03</span>
+                        <div>
+                            <strong>Final Answer</strong>
+                            <p>Displays the evaluated expression.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </main>
+
+        <footer>
+            <p>STACK DATA STRUCTURE PROJECT</p>
+            <p>Built with C++ · HTML · CSS · JavaScript</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
